@@ -2,6 +2,7 @@
 
 using namespace std;
 
+class C;
 class A{
     private:
         int x;
@@ -16,6 +17,9 @@ class A{
         }
 
 };
+class B:public 
+
+
 
 int main(){
     cout<<"-----------------------------------------\n";
