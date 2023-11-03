@@ -31,6 +31,28 @@ class B:public A{
         }
         friend int equal(B,C);
 };
+class C{
+    private:
+        int z;
+    public:
+        C(){
+            z=1;
+            cout<<"C \n";
+        }
+        friend int equal(B,C);
+};
+int equal(B b,C c){
+    return (b.y==c.z);
+}
+class D:public B{
+    public:
+        D(){
+            cout<<"D \n";
+        }
+        D(int k):B(2,3){
+            cout<<k<<"\n";
+        }
+}
 
 
 
