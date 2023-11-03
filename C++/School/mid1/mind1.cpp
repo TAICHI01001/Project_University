@@ -17,7 +17,20 @@ class A{
         }
 
 };
-class B:public 
+class B:public A{
+    private:
+        int y;
+    public:
+        B(){
+            y=0;
+            cout<<"B \n";
+        }
+        B(int a,int b):A(b,a){
+            y=a;
+            cout<<a+b<<"\n";
+        }
+        friend int equal(B,C);
+};
 
 
 
@@ -26,4 +39,5 @@ int main(){
     cout<<"We will to test practices mid1 of school \n";
     cout<<"-----------------------------------------\n";
     A a1;
+    B b1(4,5);
 }
